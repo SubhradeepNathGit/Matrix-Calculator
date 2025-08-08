@@ -277,7 +277,7 @@ const MatrixCalculator = () => {
             variant="h2"
             sx={{
               fontWeight: 800,
-              background: ' #8b5cf6',
+              background:' #125f8fff',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               mb: 2,
@@ -367,10 +367,10 @@ const MatrixCalculator = () => {
                   py: 1.5,
                   fontSize: '1.1rem',
                   fontWeight: 700,
-                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                  background: '#125f8fff',
                  
                   '&:hover': {
-                    background: 'linear-gradient(135deg, #2563eb, #1e40af)',
+                    background: 'linear-gradient(135deg, #2563eb, hsla(195, 71%, 25%, 1.00))',
                     transform: 'translateY(2px)',
                    
                   },
@@ -444,13 +444,13 @@ const MatrixCalculator = () => {
                 }}>=</Typography>
 
                 {/* Orange Matrix (Result) */}
-                <Box sx={{ width: { xs: '100%', md: '300px' }, maxWidth: '300px' }}>
+                <Box sx={{ width: { xs: '100%', md: '300px' }, maxWidth: '300px', height:'340px' }}>
                   {renderMatrix(
                     matrices.result || Array.from({ length: rows }, () =>
                       Array(columns).fill('-')
                     ),
                     ' Result = Sum of Matrix',
-                    'warning'
+                    'primary'
                   )}
                 </Box>
               </Box>
@@ -470,7 +470,7 @@ const MatrixCalculator = () => {
                     fontWeight: 700,
                     background: showResult
                       ? 'linear-gradient(135deg, #10b981, #059669)'
-                      : 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+                      : 'linear-gradient(135deg, rgba(28, 121, 202, 1),rgba(28, 121, 202, 1))',
                     boxShadow: showResult
                       ? '0 8px 32px rgba(16, 185, 129, 0.3)'
                       : '0 8px 32px rgba(139, 92, 246, 0.3)',
@@ -507,7 +507,7 @@ const MatrixCalculator = () => {
                       }}
                     >
                       <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                        🎉 Matrix Addition Complete!
+                       Matrix Addition Complete!
                       </Typography>
                       <Typography variant="body2" sx={{ opacity: 0.9, mt: 1 }}>
                         Sum of both matrices calculated successfully
