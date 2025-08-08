@@ -444,7 +444,7 @@ const MatrixCalculator = () => {
                 }}>=</Typography>
 
                 {/* Orange Matrix (Result) */}
-                <Box sx={{ width: { xs: '100%', md: '300px' }, maxWidth: '300px', height:'340px' }}>
+                <Box sx={{ width: { xs: '100%', md: '300px' }, maxWidth: '300px' }}>
                   {renderMatrix(
                     matrices.result || Array.from({ length: rows }, () =>
                       Array(columns).fill('-')
